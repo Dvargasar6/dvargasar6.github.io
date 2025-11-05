@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio - Recursos Educativos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .boton {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: #2c3e50;
+    }
+    .boton:hover {
+      transform: scale(1.05);
+    }
+    .boton img {
+      max-width: 100px;
+      margin-bottom: 15px;
+    }
+    .boton h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mis Recursos Educativos</h1>
+
+  <div class="grid">
+    <a href="latex/index.html" class="boton">
+      <img src="img/latex.png" alt="Icono LaTeX">
+      <h2>Apuntes en LaTeX</h2>
+    </a>
+    <a href="python/index.html" class="boton">
+      <img src="img/python.png" alt="Icono Python">
+      <h2>Ejemplos en Python</h2>
+    </a>
+    <a href="raspberry/index.html" class="boton">
+      <img src="img/raspberry.png" alt="Icono Raspberry Pi">
+      <h2>Proyectos Raspberry Pi</h2>
+    </a>
+    <a href="web/index.html" class="boton">
+      <img src="img/web.png" alt="Icono Web">
+      <h2>Desarrollo Web</h2>
+    </a>
+  </div>
+
+</body>
+</html>
