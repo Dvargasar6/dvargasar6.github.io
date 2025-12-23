@@ -1,0 +1,239 @@
+/* ===========================================
+   1. RESET
+   =========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ===========================================
+     19. VARIABLES CSS - NUEVO MÓDULO 3
+     =========================================== */
+:root {
+  /* Colores principales - Paleta más vibrante y clara */
+  --color-header: #1D5D4E; /* Púrpura vibrante */
+
+  --color-text-primary: #ffffff;
+
+  --color-primary-dark: #4c1d95; /* Púrpura oscuro */
+  --color-primary-darker: #3b0764; /* Púrpura muy oscuro */
+  --color-primary-light: #8b5cf6; /* Púrpura claro */
+  --color-primary-lighter: #a78bfa; /* Púrpura muy claro */
+
+  /* Colores secundarios */
+  --color-secondary: #06b6d4; /* Cyan vibrante */
+  --color-secondary-dark: #0891b2; /* Cyan oscuro */
+  --color-secondary-light: #22d3ee; /* Cyan claro */
+
+  /* Colores neutros - Más claros para mejor contraste */
+  --color-dark: #1f2937; /* Gris muy oscuro (no negro puro) */
+  --color-gray-dark: #374151; /* Gris oscuro */
+  --color-gray: #6b7280; /* Gris medio */
+  --color-gray-light: #9ca3af; /* Gris claro */
+  --color-gray-lighter: #e5e7eb; /* Gris muy claro */
+  --color-light: #f9fafb; /* Casi blanco */
+  --color-lighter: #fef3c7; /* Crema muy claro */
+  --color-white: #ffffff; /* Blanco puro */
+
+  /* Colores de acento */
+  --color-accent: #f59e0b; /* Naranja dorado */
+  --color-accent-light: #fbbf24;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Degradados - Más vibrantes y luminosos */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #8b5cf6 0%,
+    #06b6d4 100%
+  ); /* Púrpura a cyan */
+  --gradient-hero: linear-gradient(
+    135deg,
+    #a78bfa 0%,
+    #5b21b6 50%,
+    #06b6d4 100%
+  ); /* Degradado tricolor */
+  --gradient-accent: linear-gradient(
+    135deg,
+    #fbbf24 0%,
+    #f59e0b 100%
+  ); /* Dorado */
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+}
+
+/* ===========================================
+     Body
+     =========================================== */
+
+
+body {
+  background-image: linear-gradient(rgba(253, 253, 238, 0.6), rgba(253, 253, 238, 0.6)), url('../Images/ING_FISICA.jpg');
+  background-size: cover;          /* La imagen se estira para cubrir todo */
+  background-position: center;     /* Centra la imagen */
+  background-attachment: fixed;    /* La imagen se queda quieta al hacer scroll (efecto elegante) */
+  background-repeat: no-repeat;    /* Evita que la imagen se duplique */
+  font-family: 'Share Tech', sans-serif;
+  color: var(--color-header);
+  min-height: 100-vh;
+}
+
+/* ===========================================
+     Header
+     =========================================== */
+
+
+.header {
+  background: var(--color-header);
+  border-bottom: 3px solid #00B4D8; /* Línea Cian */
+  padding: 24px 0;
+  box-shadow: var(--shadow-md);
+}
+
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header__brand {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header__name {
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+  /* MEJORADO: Usando Playfair Display */
+  font-family: "Share Tech", "Roboto Mono", monospace, 'Changa One', cursive;
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: 0;
+}
+
+.header__tagline {
+  color: var(--color-text-primary);
+  font-size: 0.875rem; /* 14px */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+
+/* ===========================================
+     Navigation bar
+     =========================================== */
+.nav {
+  text-align: center;
+}
+
+.nav__list {
+  display: inline-block;
+}
+
+.nav__item {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.nav__link {
+  padding: 8px 12px;
+  display: inline-block;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-text-primary);
+}
+
+.nav__link:hover {
+  text-decoration: none;
+  color: var(--color-header);
+  background: var(--color-text-primary);
+}
+
+
+/* ===========================================
+     Index buttons
+     =========================================== */
+
+.index-buttons {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  max-width: 400px;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+
+@media (min-width: 768px) {
+  .index-buttons {
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
+    max-width: 1000px;
+    height: 500px;
+}
+}
+
+
+.index-buttons__item {
+    display: flex;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-buttons__item:hover {
+  background-color: #f0f4f8;
+  border-color: #2563eb;
+  background: linear-gradient(
+    135deg,
+    var(--color-white) 0%,
+    var(--color-lighter) 100%
+  );
+  border-color: var(--color-header);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+
+.index-buttons__item__name {
+  color: var(--color-header); /* Usa el verde oscuro #1D5D4E */
+  font-family: 'Changa One', cursive; /* Aplicamos la fuente que instalamos */
+  font-size: 1.25rem;
+  text-align: center;
+  text-decoration: none; /* Quita el subrayado si el <a> lo hereda */
+  margin-top: 10px;
+  text-transform: uppercase; /* Opcional: para un look más técnico */
+}
+
+.index-buttons__item__image {
+    text-align: center;
+    width: 60px;
+}
