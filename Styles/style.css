@@ -75,7 +75,8 @@ body {
   /* Evita que la imagen se duplique */
   font-family: 'Share Tech', sans-serif;
   color: var(--color-header);
-  min-height: 100-vh;
+  min-height: 100vh;
+  height: 100vh;
 }
 
 /* ===========================================
@@ -89,6 +90,9 @@ body {
   /* Línea Cian */
   padding: 24px 0;
   box-shadow: var(--shadow-md);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 
@@ -142,6 +146,7 @@ body {
 .nav__link {
   padding: 8px 12px;
   display: inline-block;
+  min-width: 120px;;
   color: var(--color-text-primary);
   font-weight: 500;
   text-decoration: none;
@@ -236,7 +241,7 @@ body {
   grid-template-rows: repeat(5, auto);
   grid-template-columns: repeat(10, 1fr);
   gap: 12px;
-  padding: 20px;
+  padding: 120px 20px 20px;
   grid-auto-flow: column;
 }
 
