@@ -1,6 +1,6 @@
 /* ===========================================
-   1. RESET
-   =========================================== */
+    Reset
+    =========================================== */
 * {
   margin: 0;
   padding: 0;
@@ -9,52 +9,23 @@
 
 
 /* ===========================================
-     19. VARIABLES CSS - NUEVO MÓDULO 3
+     Variables
      =========================================== */
 :root {
-  /* Colores principales - Paleta más vibrante y clara */
+
+  /* Colors */
   --color-header: #1D5D4E;
   --color-text-primary: #ffffff;
 
-  --color-primary-dark: #4c1d95;
-  /* Púrpura oscuro */
-  --color-primary-darker: #3b0764;
-  /* Púrpura muy oscuro */
-  --color-primary-light: #8b5cf6;
-  /* Púrpura claro */
-  --color-primary-lighter: #a78bfa;
-  /* Púrpura muy claro */
+  --color-folder: #f1c40f;
+  --color-folder-math: #125683;
+  --color-folder-if: #1D5D4E;
+  --color-folder-physic: #be552b;
+  --color-folder-science: #049646;
 
-  /* Colores secundarios */
-  --color-secondary: #06b6d4;
-  /* Cyan vibrante */
-  --color-secondary-dark: #0891b2;
-  /* Cyan oscuro */
-  --color-secondary-light: #22d3ee;
-  /* Cyan claro */
 
-  /* Colores neutros - Más claros para mejor contraste */
-  --color-dark: #1f2937;
-  /* Gris muy oscuro (no negro puro) */
-  --color-gray-dark: #374151;
-  /* Gris oscuro */
-  --color-gray: #6b7280;
-  /* Gris medio */
-  --color-gray-light: #9ca3af;
-  /* Gris claro */
-  --color-gray-lighter: #e5e7eb;
-  /* Gris muy claro */
-  --color-light: #f9fafb;
-  /* Casi blanco */
-  --color-lighter: #fef3c7;
-  /* Crema muy claro */
-  --color-white: #ffffff;
-  /* Blanco puro */
 
-  /* Colores de acento */
-  --color-accent: #f59e0b;
-  /* Naranja dorado */
-  --color-accent-light: #fbbf24;
+
 
   /* Sombras */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -218,7 +189,7 @@ body {
   padding: 1.25rem;
   margin-bottom: 1rem;
   line-height: 1.6;
-  background: var(--color-white);
+  background: white;
   border: 1px solid var(--color-gray-lighter);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
@@ -233,7 +204,7 @@ body {
   border-color: #2563eb;
   background: linear-gradient(135deg,
       var(--color-white) 0%,
-      var(--color-lighter) 100%);
+      #fef3c7 100%);
   border-color: var(--color-header);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
@@ -242,16 +213,12 @@ body {
 
 .index-buttons__item__name {
   color: var(--color-header);
-  /* Usa el verde oscuro #1D5D4E */
   font-family: 'Changa One', cursive;
-  /* Aplicamos la fuente que instalamos */
   font-size: 1.25rem;
   text-align: center;
   text-decoration: none;
-  /* Quita el subrayado si el <a> lo hereda */
   margin-top: 10px;
   text-transform: uppercase;
-  /* Opcional: para un look más técnico */
 }
 
 .index-buttons__item__image {
@@ -264,20 +231,31 @@ body {
      Folder buttons
      =========================================== */
 
+.folder-grid {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: repeat(10, 1fr);
+  gap: 12px;
+  padding: 20px;
+  grid-auto-flow: column;
+}
+
 .folder-button {
   display: inline-block;
-  width: 150px;
-  height: 100px;
+  width: 100px;
+  height: 50px;
   background-color: #f1c40f;
   border-radius: 5px;
   border: 2px solid black;
   position: relative;
   text-decoration: none;
   color: black;
-  padding: 20px 40px 40px 40px ;
-  margin: 100px 100px 100px 100px;
+  padding: 2px 20px 20px 15px;
+  margin: 5px 1px 10px 1px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
+  font-size: smaller;
+  font-family: 'Changa One', cursive;
 }
 
 .folder-button::before {
@@ -293,12 +271,12 @@ body {
   color: black;
 }
 
-.folder-button::after {
+.folder-button[after-element="true"]::after {
   content: "";
   position: absolute;
   top: -14px;
-  left: 10px;
-  width: 120px;
+  left: 5px;
+  width: 80px;
   height: 10px;
   background-color: #ffffff;
   border-radius: 5px 5px 0 0;
@@ -306,22 +284,81 @@ body {
   color: black;
 }
 
+.folder-button .row{
+  display: block;
+  text-align: center;
+}
+
 
 .folder-button .row-1 {
-  display: block;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  height: 23px;
   margin: 2px 0;
+  font-size:smaller;
   font-family: 'Changa One', cursive;
 }
 
 .folder-button .row-2 {
   display: flex;
   justify-content: center;
-  gap: 50px; /* spacing between text3, text4, text5 */
+  position: absolute;
+  text-align: center;
+  gap: 30px;
+  font-family: 'Changa One', cursive;
+  font-size: smaller;
+  /* spacing between text3, text4, text5 */
 }
 
 
 .folder-button:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+
+.folder-button[activate-hover="false"]:hover {
+  transform: none;
+  cursor: default;
+}
+
+.empty {
+  /**/
+}
+
+
+.folder-button.math {
+  background-color: var(--color-folder-math);
+}
+
+.folder-button.math::before {
+  background-color: var(--color-folder-math);
+}
+
+
+
+.folder-button.if {
+  background-color: var(--color-folder-if);
+}
+
+.folder-button.if::before {
+  background-color: var(--color-folder-if);
+}
+
+
+
+.folder-button.physic {
+  background-color: var(--color-folder-physic);
+}
+
+.folder-button.physic::before {
+  background-color: var(--color-folder-physic);
+}
+
+
+.folder-button.science {
+  background-color: var(--color-folder-science);
+}
+
+.folder-button.science::before {
+  background-color: var(--color-folder-science);
 }
