@@ -92,7 +92,8 @@ body.resources {
 body.index {
   display: flex;
   justify-content: center;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 
@@ -257,6 +258,14 @@ body.index {
 }
 
 
+.index-buttons__item[activate-hover="false"]:hover {
+  box-shadow: var(--shadow-sm);
+  background: white;
+  transform: none;
+  cursor: default;
+}
+
+
 .index-buttons__item__name {
   color: var(--color-header);
   font-family: 'Changa One', cursive;
@@ -267,9 +276,24 @@ body.index {
   text-transform: uppercase;
 }
 
+
 .index-buttons__item__image {
   text-align: center;
   width: 60px;
+}
+
+
+.index-buttons__item__name.comunity {
+  font-family: "serif";
+  text-transform: none;
+}
+
+.index-buttons__item__image.comunity {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 
