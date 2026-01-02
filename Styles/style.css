@@ -83,8 +83,18 @@ body {
   color: var(--color-header);
   min-height: 100vh;
   height: 100vh;
+}
+
+body.resources {
+  overflow-y: hidden;
+}
+
+body.index {
+  display: flex;
+  justify-content: center;
   overflow: auto;
 }
+
 
 /* ===========================================
      Header
@@ -94,7 +104,6 @@ body {
 .header {
   background: var(--color-header);
   border-bottom: 3px solid #00B4D8;
-  /* Línea Cian */
   padding: 24px 0;
   box-shadow: var(--shadow-md);
   position: fixed;
@@ -122,15 +131,17 @@ body {
 
 .header__name {
   color: var(--color-text-primary);
+  white-space: nowrap;
   margin-bottom: 8px;
   font-family: "Share Tech", "Roboto Mono", monospace, 'Changa One', cursive;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   letter-spacing: 0;
 }
 
 .header__tagline {
   color: var(--color-text-primary);
+  white-space: nowrap;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -150,26 +161,39 @@ body {
 }
 
 .nav__list {
-  display: inline-block;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: clamp(0px, 1vw, 10px); /* shrinks smoothly with screen size */
+  justify-self: center;
+  align-items: center;
+  width: 100%;
 }
 
+
 .nav__item {
-  display: inline-block;
-  margin: 0 16px;
+  flex: 1 1 auto;
+  display: flex;
+  margin: 0 clamp(0px, 1vw, 10px);
 }
 
 .nav__link {
-  padding: 8px 12px;
-  display: inline-block;
-  min-width: 120px;;
+  flex: 1 1 auto;
+  min-width: 10px;
+  max-width: 150px;
   color: var(--color-text-primary);
   font-weight: 500;
   text-decoration: none;
-  font-size: 0.9375rem;
-  letter-spacing: 0.01em;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(0.7rem, 1rem, 1.5rem);
+  padding: 8px clamp(0px, 1vw, 12px);
+  letter-spacing: 0.005em;
   border-radius: var(--radius-md);
   border: 2px solid var(--color-text-primary);
 }
+
+
+
 
 .nav__link:hover {
   text-decoration: none;
@@ -186,11 +210,12 @@ body {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-  max-width: 400px;
+  width: clamp(300px, 600px, 700px);
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
   padding: 150px;
+  justify-content: center;
 }
 
 
@@ -198,7 +223,9 @@ body {
   .index-buttons {
     grid-template-columns: repeat(2, 1fr);
     max-width: 1000px;
+    width: 1000px;
     height: 500px;
+    justify-content: center;
   }
 }
 
@@ -252,10 +279,10 @@ body {
 
 .folder-grid {
   display: grid;
-  grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(7, auto);
   grid-template-columns: repeat(10, 1fr);
   gap: 12px;
-  padding: 100px 20px 20px;
+  padding: 80px 20px 20px;
   grid-auto-flow: column;
 }
 
@@ -270,7 +297,7 @@ body {
   font-family: 'Changa One', cursive;
   font-size: smaller;
   color: white;
-  margin: 0px 10px 20px 0px;
+  margin: 0px 10px 10px 0px;
 }
 
 .folder-button {
@@ -284,7 +311,7 @@ body {
   text-decoration: none;
   color: black;
   padding: 2px 5px 20px 5px;
-  margin: 5px 1px 10px 1px;
+  margin: 5px 1px 5px 1px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
   font-size: smaller;
@@ -294,10 +321,10 @@ body {
 .folder-button::before {
   content: "";
   position: absolute;
-  top: -24px;
+  top: -19px;
   left: 0;
-  width: 60px;
-  height: 20px;
+  width: 40px;
+  height: 15px;
   background-color: #f1c40f;
   border-radius: 5px 5px 0 0;
   border: 2px solid black;
@@ -317,7 +344,7 @@ body {
   color: black;
 }
 
-.folder-button .row{
+.folder-button .row {
   display: block;
   text-align: center;
 }
@@ -328,10 +355,12 @@ body {
   justify-content: center;
   height: 23px;
   margin: 2px 0;
-  font-size:smaller;
+  font-size: smaller;
   font-family: 'Changa One', cursive;
 }
 
+
+/*
 .folder-button .row-2 {
   display: flex;
   justify-content: center;
@@ -341,7 +370,20 @@ body {
   padding-left: 5px;
   font-family: 'Changa One', cursive;
   font-size: smaller;
-  /* spacing between text3, text4, text5 */
+} */
+
+.folder-button .row-2 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  bottom: 5px;
+  width: 110%;
+  padding: 0 5px 0 0;
+  margin-left: -5px;
+  font-family: 'Changa One', cursive;
+  font-size: smaller;
 }
 
 
@@ -353,10 +395,6 @@ body {
 .folder-button[activate-hover="false"]:hover {
   transform: none;
   cursor: default;
-}
-
-.empty {
-  /**/
 }
 
 

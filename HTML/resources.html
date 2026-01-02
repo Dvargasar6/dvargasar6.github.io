@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Recursos IF</title>
     <meta name="description" content="Recurso académicos IF." />
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../Styles/style.css" />
 </head>
 
-<body>
+<body class="resources">
     <header class="header small">
         <div class="header__container">
             <nav class="nav">
@@ -29,10 +29,10 @@
                         <a href="legal.html" class="nav__link">Legal</a>
                     </li>
                     <li class="nav__item">
-                        <a href="comunity.html" class="nav__link">Comunidad IF</a>
+                        <a href="comunity.html" class="nav__link">Comunidad</a>
                     </li>
                     <li class="nav__item">
-                        <a href="information.html" class="nav__link">Información</a>
+                        <a href="information.html" class="nav__link">Info</a>
                     </li>
                 </ul>
             </nav>
@@ -48,43 +48,44 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Int. a la Ing. Física</span>
             <span class="row row-2">
-                <span> </span>
-                <span>1</span>
-                <span>1</span>
+                <span></span>
+                <span title="Número de créditos">1</span>
+                <span></span>
             </span>
         </button>
-        <button class="folder-button math" after-element="true">
+        <button class="folder-button math" activate-hover="false">
             <span class="row row-1">Cálculo Diferencial</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">1</span>
             </span>
         </button>
         <button class="folder-button math" activate-hover="false">
             <span class="row row-1">Geometría Vectorial</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>3</span>
+                <span></span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">2</span>
             </span>
         </button>
         <button class="folder-button science" activate-hover="false">
             <span class="row row-1">Química General</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>4</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">3</span>
             </span>
         </button>
         <button class="folder-button science" activate-hover="false">
             <span class="row row-1">Fund. de Programación</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>5</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">4</span>
             </span>
         </button>
+        <empty></empty>
 
 
 
@@ -96,41 +97,49 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Taller I</span>
             <span class="row row-2">
-                <span>2</span>
-                <span>5</span>
-                <span>6</span>
+                <span title="Prerrequisito">2</span>
+                <span title="Número de créditos">5</span>
+                <span title="Prerrequisito de">5</span>
             </span>
         </button>
         <a href="./Subjects/Semester_2/integral.html" class="folder-button math" after-element="true">
             <span class="row row-1">Cálculo Integral</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span title="Prerrequisito">1</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">6</span>
             </span>
         </a>
         <button class="folder-button math" activate-hover="false">
             <span class="row row-1">Álgebra Lineal</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>1</span>
+                <span title="Prerrequisito">2</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">7</span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Física Mecánica</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span title="Prerrequisito">1</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">8</span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
             <span class="row row-1">Inglés I</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">9</span>
+            </span>
+        </button>
+        <button class="folder-button" activate-hover="false">
+            <span class="row row-1">Libre Elección</span>
+            <span class="row row-2">
+                <span></span>
+                <span title="Número de créditos">4</span>
+                <span></span>
             </span>
         </button>
 
@@ -143,43 +152,44 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Taller II</span>
             <span class="row row-2">
-                <span> </span>
-                <span>5</span>
-                <span>1</span>
+                <span title="Prerrequisito">5</span>
+                <span title="Número de créditos">5</span>
+                <span title="Prerrequisito de">10</span>
             </span>
         </button>
         <button class="folder-button math" activate-hover="false">
             <span class="row row-1">Cálculo en Varias Variables</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span title="Prerrequisito">6</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">11</span>
             </span>
         </button>
         <button class="folder-button math" activate-hover="false">
             <span class="row row-1">Ecuaciones Diferenciales</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span title="Prerrequisito">6</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">12</span>
             </span>
         </button>
         <button class="folder-button math" activate-hover="false">
             <span class="row row-1">Estadística I</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span title="Prerrequisito">6</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">13</span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Física II</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span title="Prerrequisitos">6,8</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">14</span>
             </span>
         </button>
+        <empty></empty>
 
 
         <!-- COLUMN 4 -->
@@ -189,41 +199,49 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Taller III</span>
             <span class="row row-2">
-                <span> </span>
-                <span>5</span>
-                <span>2</span>
+                <span title="Prerrequisitos">10,14</span>
+                <span title="Número de créditos">5</span>
+                <span title="Prerrequisito de">16</span>
             </span>
         </button>
         <button class="folder-button math" activate-hover="false">
             <span class="row row-1">Matemáticas Especiales</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
-            </span>
-        </button>
-        <button class="folder-button physic" activate-hover="false">
-            <span class="row row-1">Termodinámica</span>
-            <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span title="Prerrequisito">12</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">17</span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Física III</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span title="Prerrequisitos">8,12</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">18</span>
+            </span>
+        </button>
+        <button class="folder-button physic" activate-hover="false">
+            <span class="row row-1">Termodinámica</span>
+            <span class="row row-2">
+                <span title="Prerrequisito">1</span>
+                <span title="Número de créditos">4</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
             <span class="row row-1">Inglés II</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span title="Prerrequisito">9</span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">19</span>
+            </span>
+        </button>
+        <button class="folder-button" activate-hover="false">
+            <span class="row row-1">Libre Elección</span>
+            <span class="row row-2">
+                <span></span>
+                <span title="Número de créditos">4</span>
+                <span></span>
             </span>
         </button>
 
@@ -235,43 +253,44 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Taller IV</span>
             <span class="row row-2">
-                <span> </span>
-                <span>5</span>
-                <span>2</span>
+                <span title="Prerrequisito">16</span>
+                <span title="Número de créditos">5</span>
+                <span title="Prerrequisito de">20</span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Física Moderna</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span>2</span>
+                <span title="Prerrequisito">18</span>
+                <span title="Número de créditos">4</span>
+                <span title="Prerrequisito de">21</span>
             </span>
         </button>
         <button class="folder-button science" activate-hover="false">
             <span class="row row-1">Int. a la Bioquímica</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span title="Prerrequisito">3</span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">22</span>
             </span>
         </button>
         <button class="folder-button science" activate-hover="false">
             <span class="row row-1">Lab. de Int. Bioquímica</span>
             <span class="row row-2">
-                <span> </span>
-                <span>2</span>
-                <span>2</span>
+                <span title="Prerrequisito">22</span>
+                <span title="Número de créditos">2</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
-            <span class="row row-1">Inglés III</span>
+            <span class="row row-1">Libre Elección</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">4</span>
+                <span></span>
             </span>
         </button>
+        <empty></empty>
 
 
         <!-- COLUMN 6 -->
@@ -281,41 +300,49 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Taller V</span>
             <span class="row row-2">
-                <span> </span>
-                <span>5</span>
-                <span>2</span>
+                <span title="Prerrequisitos">4,20</span>
+                <span title="Número de créditos">5</span>
+                <span title="Prerrequisito de">24</span>
             </span>
         </button>
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Metrología</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span title="Prerrequisito">13</span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Biofísica</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span title="Prerrequisitos">14,22</span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Lab. de Física Moderna</span>
             <span class="row row-2">
-                <span> </span>
-                <span>1</span>
-                <span>2</span>
+                <span title="Prerrequisito">21</span>
+                <span title="Número de créditos">1</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
-            <span class="row row-1">Inglés IV</span>
+            <span class="row row-1">Libre Elección</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span></span>
+            </span>
+        </button>
+        <button class="folder-button" activate-hover="false">
+            <span class="row row-1">Libre Elección</span>
+            <span class="row row-2">
+                <span></span>
+                <span title="Número de créditos">4</span>
+                <span></span>
             </span>
         </button>
 
@@ -327,44 +354,45 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Optativa Instrumentación</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Fund. en Ing. de Materiales</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span title="Prerrequisitos">18,22</span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Mecánica Cuántica</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span title="Prerrequisitos">17,21</span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">25</span>
             </span>
         </button>
         <button class="folder-button science" activate-hover="false">
             <span class="row row-1">Optativa Ciencias Básicas</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
             <span class="row row-1">Optativa Administrativa</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
-    
+        <empty></empty>
+
 
 
         <!-- COLUMN 8-->
@@ -374,43 +402,44 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Optativa Instrumentación</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Óptica</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span title="Prerrequisitos">17,18</span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">26</span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Física de Radiaciones</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span title="Prerrequisitos">17,21</span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">27</span>
             </span>
         </button>
         <button class="folder-button science" activate-hover="false">
             <span class="row row-1">Optativa Ciencias Básicas</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
             <span class="row row-1">Libre Elección</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
+        <empty></empty>
 
 
         <!-- COLUMN 9 -->
@@ -420,43 +449,44 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Optativa Instrumentación</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>1</span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button physic" activate-hover="false">
             <span class="row row-1">Estado Sólido</span>
             <span class="row row-2">
-                <span> </span>
-                <span>3</span>
-                <span>2</span>
+                <span title="Prerrequisito">25</span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">28</span>
+            </span>
+        </button>
+        <button class="folder-button" activate-hover="false">
+            <span class="row row-1">Inglés III</span>
+            <span class="row row-2">
+                <span title="Prerrequisito">19</span>
+                <span title="Número de créditos">3</span>
+                <span title="Prerrequisito de">29</span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
             <span class="row row-1">Libre Elección</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
+                <span></span>
+                <span title="Número de créditos">4</span>
                 <span></span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
             <span class="row row-1">Libre Elección</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span> </span>
+                <span></span>
+                <span title="Número de créditos">4</span>
+                <span></span>
             </span>
         </button>
-        <button class="folder-button" activate-hover="false">
-            <span class="row row-1">Libre Elección</span>
-            <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span> </span>
-            </span>
-        </button>
+        <empty></empty>
 
 
         <!-- COLUMN 10 -->
@@ -466,44 +496,38 @@
         <button class="folder-button if" activate-hover="false">
             <span class="row row-1">Trabajo de Grado</span>
             <span class="row row-2">
-                <span> </span>
-                <span>6</span>
-                <span>2</span>
+                <span title="Prerrequisito">28</span>
+                <span title="Número de créditos">6</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
             <span class="row row-1">Optativa Administrativa</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span> </span>
+                <span></span>
+                <span title="Número de créditos">3</span>
+                <span></span>
+            </span>
+        </button>
+        <button class="folder-button" activate-hover="false">
+            <span class="row row-1">Inglés IV</span>
+            <span class="row row-2">
+                <span title="Prerrequisito">29</span>
+                <span title="Número de créditos">3</span>
+                <span></span>
             </span>
         </button>
         <button class="folder-button" activate-hover="false">
             <span class="row row-1">Libre Elección</span>
             <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span> </span>
+                <span></span>
+                <span title="Número de créditos">4</span>
+                <span></span>
             </span>
         </button>
-        <button class="folder-button" activate-hover="false">
-            <span class="row row-1">Libre Elección</span>
-            <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span> </span>
-            </span>
-        </button>
-        <button class="folder-button" activate-hover="false">
-            <span class="row row-1">Libre Elección</span>
-            <span class="row row-2">
-                <span> </span>
-                <span>4</span>
-                <span> </span>
-            </span>
-        </button>
-
+        <empty></empty>
+        <empty></empty>
+        <empty></empty>
 </body>
 
 </html>
