@@ -116,6 +116,7 @@ body.index {
 
 .header.small {
   height: 70px;
+  margin-bottom: 0px;
 }
 
 
@@ -274,6 +275,13 @@ body.index {
   text-decoration: none;
   margin-top: 10px;
   text-transform: uppercase;
+}
+
+.index-buttons__item__autor {
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  color: black;
 }
 
 
