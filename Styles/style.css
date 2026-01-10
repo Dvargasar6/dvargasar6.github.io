@@ -220,6 +220,12 @@ body.index {
   justify-content: center;
 }
 
+.index-buttons.small {
+  padding: 150px;
+  margin-top: 0;
+  gap: 1rem;
+}
+
 
 @media (min-width: 768px) {
   .index-buttons {
@@ -228,6 +234,7 @@ body.index {
     width: 1000px;
     height: 500px;
     justify-content: center;
+    margin-top: 0px;
   }
 }
 
