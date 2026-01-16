@@ -230,6 +230,14 @@ body.index {
     height: 500px;
     justify-content: center;
   }
+
+  .index-buttons.many {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1500px;
+    width: 1500px;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+  }
 }
 
 
@@ -317,6 +325,18 @@ body.index {
   gap: 12px;
   padding: 80px 20px 20px;
   grid-auto-flow: column;
+}
+
+.folder-grid.instrumentation {
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 80px 50px 50px;
+  grid-auto-flow: column;
+  margin-top: 20px;
+  margin-left: 20px;
+
+
 }
 
 .folder-index {
