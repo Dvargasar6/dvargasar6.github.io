@@ -332,7 +332,7 @@ body.index {
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   padding: 80px 50px 50px;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   margin-top: 20px;
 }
 
