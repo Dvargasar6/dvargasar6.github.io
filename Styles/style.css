@@ -484,3 +484,38 @@ body.index {
 .folder-button.science::before {
   background-color: var(--color-folder-science);
 }
+
+
+
+
+
+.about {
+  margin-top: 50px;
+  padding: 48px 0;
+}
+
+.about__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about__title {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.about__intro {
+  font-size: 1.25rem; /* 20px */
+  text-align: center;
+  color: #333333;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.about__text {
+  color: #666666;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
