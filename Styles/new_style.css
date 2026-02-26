@@ -49,20 +49,38 @@
      Body
      =========================================== */
 
-
+/*
 body {
   background-image: linear-gradient(rgba(253, 253, 238, 0.6), rgba(253, 253, 238, 0.6)), url('../Images/ING_FISICA.jpg');
   background-size: cover;
-  /* La imagen se estira para cubrir todo */
+  /* La imagen se estira para cubrir todo 
   background-position: center;
-  /* Centra la imagen */
+  /* Centra la imagen 
   background-attachment: fixed;
-  /* La imagen se queda quieta al hacer scroll (efecto elegante) */
+  /* La imagen se queda quieta al hacer scroll (efecto elegante)
   background-repeat: no-repeat;
-  /* Evita que la imagen se duplique */
+  /* Evita que la imagen se duplique 
   font-family: 'Share Tech', sans-serif;
   color: var(--color-header);
   min-height: 100vh;
+}
+
+*/
+
+body::before {
+  content: "";
+  position: fixed; /* Esto hace el trabajo de "fixed" de forma real */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Mueve aquí todas tus propiedades de fondo */
+  background-image: linear-gradient(rgba(253, 253, 238, 0.6), rgba(253, 253, 238, 0.6)), url('../Images/ING_FISICA.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* Lo envía detrás de todo el contenido */
+  will-change: transform; /* Ayuda al rendimiento en móviles */
 }
 
 .index {
