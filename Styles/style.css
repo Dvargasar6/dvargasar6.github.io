@@ -29,6 +29,8 @@
   --width-folder-buttons: 100px;
   --height-folder-buttons: 50px;
 
+  --height-header: 150px;
+
 
 
 
@@ -110,7 +112,7 @@ body.index {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 150px;
+  height: var(--height-header);
   z-index: 1000;
 }
 

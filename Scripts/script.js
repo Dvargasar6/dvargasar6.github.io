@@ -51,12 +51,16 @@ class FolderButton {
         if (this.category) {
             element.classList.add(this.category);
         }
-        if (this.activateHover) {
-            element.setAttribute('activate-hover', 'true');
-        }
+        
         if (this.afterElement) {
             element.setAttribute('after-element', 'true');
+            element.setAttribute('activate-hover', 'true');
+        } else {
+            element.setAttribute('after-element', 'false');
+            element.setAttribute('activate-hover', 'false');
         }
+
+        
         if (this.link) {
             element.href = this.link;
         }
