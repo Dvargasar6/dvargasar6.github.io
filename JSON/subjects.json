@@ -138,7 +138,9 @@
         "credits": 4,
         "prerequisite": "6",
         "subject_code": "11",
-        "category": "math"
+        "category": "math",
+        "link": "JSON/Subjects/varias.json",
+        "afterElement": true
     },
     {
         "type": "FolderButton",
@@ -274,7 +276,9 @@
         "title": "Metrología",
         "credits": 3,
         "prerequisite": "13",
-        "category": "if"
+        "category": "if",
+        "link": "JSON/Subjects/metrologia.json",
+        "afterElement": true
     },
     {
         "type": "FolderButton",
@@ -293,7 +297,7 @@
     {
         "type": "FolderButton",
         "title": "Libre Elección",
-        "credits": 3
+        "credits": 4
     },
     {
         "type": "FolderButton",
@@ -308,7 +312,9 @@
         "type": "FolderButton",
         "title": "Optativa Instrumentación",
         "credits": 3,
-        "category": "if"
+        "category": "if",
+        "link": "JSON/Subjects/instrumentation.json",
+        "afterElement": true
     },
     {
         "type": "FolderButton",
@@ -323,7 +329,9 @@
         "credits": 3,
         "prerequisite": "17,21",
         "subject_code": "25",
-        "category": "physic"
+        "category": "physic",
+        "link": "JSON/Subjects/cuantica.json",
+        "afterElement": true
     },
     {
         "type": "FolderButton",
@@ -347,7 +355,9 @@
         "type": "FolderButton",
         "title": "Optativa Instrumentación",
         "credits": 3,
-        "category": "if"
+        "category": "if",
+        "link": "JSON/Subjects/instrumentation.json",
+        "afterElement": true
     },
     {
         "type": "FolderButton",
@@ -374,7 +384,7 @@
     {
         "type": "FolderButton",
         "title": "Libre Elección",
-        "credits": 3
+        "credits": 4
     },
     {
         "type": "EmptySpace"
@@ -387,7 +397,9 @@
         "type": "FolderButton",
         "title": "Optativa Instrumentación",
         "credits": 3,
-        "category": "if"
+        "category": "if",
+        "link": "JSON/Subjects/instrumentation.json",
+        "afterElement": true
     },
     {
         "type": "FolderButton",
