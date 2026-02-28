@@ -23,48 +23,27 @@
   --color-folder-physic: #be552b;
   --color-folder-science: #049646;
 
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
 
   /* Dimensions */
 
+  --height-header: 150px;
+  --height-header-small: 95px;
+  --height-header-nav: 70px;
   --width-folder-buttons: 100px;
   --height-folder-buttons: 50px;
 
-  --height-header: 150px;
-
-
-
-
-
-  /* Sombras */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
-  /* Degradados - Más vibrantes y luminosos */
-  --gradient-primary: linear-gradient(135deg,
-      #8b5cf6 0%,
-      #06b6d4 100%);
-  /* Púrpura a cyan */
-  --gradient-hero: linear-gradient(135deg,
-      #a78bfa 0%,
-      #5b21b6 50%,
-      #06b6d4 100%);
-  /* Degradado tricolor */
-  --gradient-accent: linear-gradient(135deg,
-      #fbbf24 0%,
-      #f59e0b 100%);
-  /* Dorado */
 
   /* Border radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
+  --radius-buttons: 0.5rem;
+  --radius-folders: 5px;
   --radius-full: 9999px;
+
 }
+
 
 /* ===========================================
      Body
@@ -74,29 +53,14 @@
 body {
   background-image: linear-gradient(rgba(253, 253, 238, 0.6), rgba(253, 253, 238, 0.6)), url('../Images/ING_FISICA.jpg');
   background-size: cover;
-  /* La imagen se estira para cubrir todo */
   background-position: center;
-  /* Centra la imagen */
   background-attachment: fixed;
-  /* La imagen se queda quieta al hacer scroll (efecto elegante) */
   background-repeat: no-repeat;
-  /* Evita que la imagen se duplique */
   font-family: 'Share Tech', sans-serif;
   color: var(--color-header);
   min-height: 100vh;
-  height: 100vh;
 }
 
-body.resources {
-  overflow-y: hidden;
-}
-
-body.index {
-  display: flex;
-  justify-content: center;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
 
 
 /* ===========================================
@@ -105,32 +69,32 @@ body.index {
 
 
 .header {
+  top: 0;
+  position: fixed;
   background: var(--color-header);
   border-bottom: 3px solid #00B4D8;
-  padding: 24px 0;
-  box-shadow: var(--shadow-md);
-  position: fixed;
-  top: 0;
+  padding: 20px 0;
+  margin-bottom: 20px;
   width: 100%;
   height: var(--height-header);
   z-index: 1000;
 }
 
 .header.small {
-  height: 70px;
-  margin-bottom: 0px;
+  height: var(--height-header-small);
 }
 
+.header.nav {
+  height: var(--height-header-nav);
+}
 
 .header__container {
-  max-width: 1200px;
+  text-align: center;
+  width: 95%;
+  height: 100%;
   margin: 0 auto;
   padding: 0 20px;
-}
 
-.header__brand {
-  text-align: center;
-  margin-bottom: 24px;
 }
 
 .header__name {
@@ -139,19 +103,19 @@ body.index {
   margin-bottom: 8px;
   font-family: "Share Tech", "Roboto Mono", monospace, 'Changa One', cursive;
   font-weight: 700;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(3rem, 3.5rem, 4rem);
   letter-spacing: 0;
+  width: 100%;
 }
 
 .header__tagline {
   color: var(--color-text-primary);
   white-space: nowrap;
-  font-size: 0.875rem;
+  font-size: 1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-weight: 500;
 }
-
 
 /* ===========================================
      Navigation bar
@@ -160,46 +124,27 @@ body.index {
   display: flex;
   justify-content: center;
   text-align: center;
-  position: relative;
-  top: -10px;
-}
-
-.nav__list {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: clamp(0px, 1vw, 10px); /* shrinks smoothly with screen size */
-  justify-self: center;
   align-items: center;
+  height: 100%;
   width: 100%;
 }
 
-
-.nav__item {
-  flex: 1 1 auto;
-  display: flex;
-  margin: 0 clamp(0px, 1vw, 10px);
-}
-
-.nav__link {
-  flex: 1 1 auto;
-  min-width: 10px;
-  max-width: 150px;
-  color: var(--color-text-primary);
-  font-weight: 500;
-  text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
-  font-size: clamp(0.7rem, 1rem, 1.5rem);
-  padding: 8px clamp(0px, 1vw, 12px);
-  letter-spacing: 0.005em;
-  border-radius: var(--radius-md);
+.nav__button {
+  flex-grow: 1;
+  width: 25%;
+  height: 100%;
+  margin: 30px;
+  margin: clamp(10px, 20px, 30px);
   border: 2px solid var(--color-text-primary);
+  border-radius: var(--radius-buttons);
+  align-content: center;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: clamp(0.7rem, 0.8rem, 1.5rem);
 }
 
-
-
-
-.nav__link:hover {
+.nav__button:hover {
   text-decoration: none;
   color: var(--color-header);
   background: var(--color-text-primary);
@@ -210,47 +155,25 @@ body.index {
      Index buttons
      =========================================== */
 
-.index-buttons {
+
+.button-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr;
-  width: clamp(300px, 600px, 700px);
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 150px;
-  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 90%;
+  margin: var(--height-header) auto 0 auto;
+  padding: 20px;
 }
 
 
-
-@media (min-width: 768px) {
-  .index-buttons {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1000px;
-    width: 1000px;
-    height: 500px;
-    justify-content: center;
-  }
-
-  .index-buttons.many {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1500px;
-    width: 1500px;
-    margin-bottom: 100px;
-    padding-bottom: 20px;
-  }
-}
-
-
-.index-buttons__item {
+.index-button {
   display: flex;
   padding: 1.25rem;
   margin-bottom: 1rem;
   line-height: 1.6;
   background: white;
   border: 1px solid var(--color-gray-lighter);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-buttons);
   box-shadow: var(--shadow-sm);
   text-decoration: none;
   flex-direction: column;
@@ -258,7 +181,7 @@ body.index {
   justify-content: center;
 }
 
-.index-buttons__item:hover {
+.index-button:hover {
   background-color: #f0f4f8;
   border-color: #2563eb;
   background: linear-gradient(135deg,
@@ -269,16 +192,7 @@ body.index {
   transform: translateY(-2px);
 }
 
-
-.index-buttons__item[activate-hover="false"]:hover {
-  box-shadow: var(--shadow-sm);
-  background: white;
-  transform: none;
-  cursor: default;
-}
-
-
-.index-buttons__item__name {
+.index-button__name {
   color: var(--color-header);
   font-family: 'Changa One', cursive;
   font-size: 1.25rem;
@@ -288,7 +202,7 @@ body.index {
   text-transform: uppercase;
 }
 
-.index-buttons__item__autor {
+.index-button__autor {
   text-decoration: none;
   font-family: 'Times New Roman', Times, serif;
   font-size: 0.7rem;
@@ -296,18 +210,17 @@ body.index {
 }
 
 
-.index-buttons__item__image {
+.index-button__image {
   text-align: center;
   width: 60px;
 }
 
-
-.index-buttons__item__name.comunity {
+.index-button__name.comunity {
   font-family: "serif";
   text-transform: none;
 }
 
-.index-buttons__item__image.comunity {
+.index-button__image.comunity {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -315,59 +228,52 @@ body.index {
   margin-bottom: 10px;
 }
 
-
 /* ===========================================
-     Folder buttons
+     Folder grid
      =========================================== */
+
 
 .folder-grid {
   display: grid;
-  grid-template-rows: repeat(7, auto);
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  margin-right: 10px;
   gap: 12px;
-  padding: 80px 20px 20px;
-  grid-auto-flow: column;
+  padding: 20px 20px 20px;
+  grid-auto-flow: row;
+  font-family: 'Changa One', cursive;
+  margin-top: var(--height-header-nav);
 }
 
-.folder-grid.instrumentation {
-  grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  padding: 80px 50px 50px;
-  grid-auto-flow: row;
-  margin-top: 20px;
-}
 
 .semester-index {
-  display: inline-block;
   width: var(--width-folder-buttons);
   height: 20px;
   background-color: black;
   border: 2px solid black;
   border-radius: 5px;
-
-  font-family: 'Changa One', cursive;
   font-size: smaller;
   color: white;
   margin: 0px 10px 10px 0px;
+  font-family: 'Changa One', cursive;
 }
 
 .folder-button {
-  display: inline-block;
+
   width: var(--width-folder-buttons);
   height: var(--height-folder-buttons);
-  background-color: #f1c40f;
-  border-radius: 5px;
+  background-color: var(--color-folder);
+  border-radius: var(--radius-folders);
   border: 2px solid black;
   position: relative;
   text-decoration: none;
   color: black;
   padding: 2px 5px 20px 5px;
   margin: 5px 1px 5px 1px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
   font-size: smaller;
   font-family: 'Changa One', cursive;
+  text-align: center;
 }
 
 .folder-button::before {
@@ -377,10 +283,9 @@ body.index {
   left: 0;
   width: 40px;
   height: 15px;
-  background-color: #f1c40f;
+  background-color: var(--color-folder);
   border-radius: 5px 5px 0 0;
   border: 2px solid black;
-  color: black;
 }
 
 .folder-button[after-element="true"]::after {
@@ -393,14 +298,7 @@ body.index {
   background-color: #ffffff;
   border-radius: 5px 5px 0 0;
   border: 2px solid black;
-  color: black;
 }
-
-.folder-button .row {
-  display: block;
-  text-align: center;
-}
-
 
 .folder-button .row-1 {
   display: flex;
@@ -408,43 +306,26 @@ body.index {
   height: 23px;
   margin: 2px 0;
   font-size: smaller;
-  font-family: 'Changa One', cursive;
 }
 
-
-/*
-.folder-button .row-2 {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  text-align: center;
-  gap: 30px;
-  padding-left: 5px;
-  font-family: 'Changa One', cursive;
-  font-size: smaller;
-} */
 
 .folder-button .row-2 {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  justify-items: center;
   position: absolute;
   bottom: 5px;
   width: 110%;
   padding: 0 5px 0 0;
   margin-left: -5px;
-  font-family: 'Changa One', cursive;
   font-size: smaller;
 }
 
-
-.folder-button:hover {
+.folder-button[after-element="true"]:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
 
-.folder-button[activate-hover="false"]:hover {
+.folder-button:hover {
   transform: none;
   cursor: default;
 }
@@ -488,17 +369,22 @@ body.index {
 }
 
 
-
-
+/* ===========================================
+     About section
+     =========================================== */
 
 .about {
+  display: flex;
+  justify-content: center;
   margin-top: 50px;
   padding: 48px 0;
+  width: 100%;
 }
 
 .about__container {
   max-width: 800px;
   margin: 0 auto;
+  width: 90%;
 }
 
 .about__title {
@@ -508,7 +394,7 @@ body.index {
 }
 
 .about__intro {
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
   text-align: center;
   color: #333333;
   margin-bottom: 1.5rem;
@@ -516,8 +402,44 @@ body.index {
   font-weight: 400;
 }
 
-.about__text {
-  color: #666666;
-  margin-bottom: 2rem;
-  line-height: 1.8;
+
+
+
+/* ===========================================
+     Smal screens
+     =========================================== */
+
+
+@media (max-width: 480px) {
+
+
+  .header {
+    height: var(--height-header-small);
+    padding: 12px 0;
+  }
+
+  .header__container {
+    padding: 0;
+  }
+
+  .nav__button {
+    margin: 4px;
+    height: 90%;
+  }
+
+  .header__name {
+    font-size: clamp(2rem, 2.3rem, 3rem);
+  }
+
+  .header__tagline {
+    font-size: 0.63rem;
+  }
+
+  .button-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 90%;
+    margin: var(--height-header-small) auto 0 auto;
+    padding: 15px;
+  }
+
 }
